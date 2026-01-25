@@ -1091,3 +1091,34 @@ input[type="date"] {
     background-position: 29% center; /* more right shift */
   }
 }
+
+.navbar-toggler {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler.open .navbar-toggler-icon {
+  background-image: none;
+}
+
+.navbar-toggler.open::before {
+  content: "×";
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 -0.8rem;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
