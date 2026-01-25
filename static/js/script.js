@@ -101,14 +101,14 @@ function initNavbar() {
   /* =========================
      1️⃣ Hamburger ↔ Close icon
      ========================= */
-  collapse.addEventListener("shown.bs.collapse", () => {
-    toggler.innerHTML = "&times;";
-    toggler.style.fontSize = "2rem";
-  });
+collapse.addEventListener("shown.bs.collapse", () => {
+  toggler.classList.add("open");
+});
 
-  collapse.addEventListener("hidden.bs.collapse", () => {
-    toggler.innerHTML = `<span class="navbar-toggler-icon"></span>`;
-  });
+collapse.addEventListener("hidden.bs.collapse", () => {
+  toggler.classList.remove("open");
+});
+
 
   /* =========================
      2️⃣ Close on nav link click (mobile)
@@ -749,3 +749,4 @@ function closeBookingModal() {
     document.body.style.overflow = "auto";
   }
 }
+
