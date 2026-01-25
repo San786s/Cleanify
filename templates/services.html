@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='images/favicon-16x16.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='images/favicon-32x32.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='images/apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Cleanify Professional Cleaning Services</title>
+    <meta
+      name="description"
+      content="Complete list of professional cleaning services offered by Cleanify in Bangalore. Home cleaning, sofa cleaning, kitchen cleaning, bathroom cleaning, and carpet cleaning."
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="{{ url_for('index') }}" style="text-decoration: none"
+            ><h2>Cleanify</h2></a
+          >
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+          <a href="{{ url_for('services') }}" class="nav-link">Services</a>
+          <a href="{{ url_for('about') }}" class="nav-link">About</a>
+          <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="service-detail-hero">
+      <img
+        src="{{ url_for('static', filename='images/serv.png') }}"
+        alt="Cleaning Services"
+      />
+      <div class="service-detail-content">
+        <h1>Our Cleaning Services</h1>
+        <p>Comprehensive cleaning solutions for your home and office</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <h2 class="section-title">All Our Services</h2>
+        <p class="section-subtitle">
+          We offer a wide range of professional cleaning services to keep your
+          space spotless
+        </p>
+
+        <div class="services-grid">
+          <!-- All service cards from home page plus more -->
+          <div class="service-card fade-in">
+            <div class="card-image">
+              <img
+                src="{{ url_for('static', filename='images/home-cleaning.jpg') }}"
+                alt="Home Cleaning"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Home Cleaning</h3>
+              <p>
+                Complete home cleaning including living room, bedrooms, and
+                common areas
+              </p>
+              <div class="price">Starting from ₹1,000</div>
+              <a href="{{ url_for('home_cleaning') }}" class="details-btn"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="card-image">
+              <img
+                src="{{ url_for('static', filename='images/sofa-cleaning.jpg') }}"
+                alt="Sofa Cleaning"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Sofa Cleaning</h3>
+              <p>Deep cleaning and sanitization of sofas and upholstery</p>
+              <div class="price">Starting from ₹799</div>
+              <a href="{{ url_for('sofa_cleaning') }}" class="details-btn"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="card-image">
+              <img
+                src="{{ url_for('static', filename='images/kitchen-cleaning.jpg') }}"
+                alt="Kitchen Cleaning"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Kitchen Cleaning</h3>
+              <p>
+                Complete kitchen cleaning including cabinets, countertops, and
+                appliances
+              </p>
+              <div class="price">Starting from ₹999</div>
+              <a href="{{ url_for('kitchen_cleaning') }}" class="details-btn"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="card-image">
+              <img
+                src="{{ url_for('static', filename='images/bathroom-cleaning.jpg') }}"
+                alt="Bathroom Cleaning"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Bathroom Cleaning</h3>
+              <p>Deep cleaning and sanitization of bathrooms and toilets</p>
+              <div class="price">Starting from ₹699</div>
+              <a href="{{ url_for('bathroom_cleaning') }}" class="details-btn"
+                >View Details</a
+              >
+            </div>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="card-image">
+              <img
+                src="{{ url_for('static', filename='images/carpet-cleaning.jpg') }}"
+                alt="Carpet Cleaning"
+              />
+            </div>
+            <div class="card-content">
+              <h3>Carpet Cleaning</h3>
+              <p>Professional carpet cleaning and stain removal services</p>
+              <div class="price">Starting from ₹1,099</div>
+              <a href="{{ url_for('carpet_cleaning') }}" class="details-btn"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Cleanify</h3>
+            <p>Professional cleaning services for a healthier, happier home.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('services') }}">Services</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <a href="{{ url_for('home_cleaning') }}">Home Cleaning</a>
+            <a href="{{ url_for('sofa_cleaning') }}">Sofa Cleaning</a>
+            <a href="{{ url_for('kitchen_cleaning') }}">Kitchen Cleaning</a>
+            <a href="{{ url_for('bathroom_cleaning') }}">Bathroom Cleaning</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cleanify. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
