@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='images/favicon-16x16.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='images/favicon-32x32.png') }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='images/apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Cleanify</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="{{ url_for('index') }}" style="text-decoration: none"
+            ><h2>Cleanify</h2></a
+          >
+        </div>
+        <div class="nav-menu">
+          <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+          <a href="{{ url_for('services') }}" class="nav-link">Services</a>
+          <a href="{{ url_for('about') }}" class="nav-link">About</a>
+          <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 404 Content -->
+    <section class="hero" style="min-height: 80vh">
+      <div class="hero-content">
+        <h1 class="hero-title" style="font-size: 6rem; margin-bottom: 1rem">
+          404
+        </h1>
+        <h2 class="hero-title" style="font-size: 2.5rem">Page Not Found</h2>
+        <p class="hero-subtitle" style="font-size: 1.2rem">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div style="margin-top: 2rem">
+          <a href="{{ url_for('index') }}" class="cta-button">Go Back Home</a>
+          <a
+            href="{{ url_for('services') }}"
+            class="cta-button"
+            style="
+              margin-left: 1rem;
+              background: transparent;
+              border: 2px solid white;
+            "
+            >Our Services</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Cleanify</h3>
+            <p>Professional cleaning services for a healthier, happier home.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('services') }}">Services</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <a href="{{ url_for('home_cleaning') }}">Home Cleaning</a>
+            <a href="{{ url_for('sofa_cleaning') }}">Sofa Cleaning</a>
+            <a href="{{ url_for('kitchen_cleaning') }}">Kitchen Cleaning</a>
+            <a href="{{ url_for('bathroom_cleaning') }}">Bathroom Cleaning</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Cleanify. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

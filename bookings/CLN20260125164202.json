@@ -1,0 +1,14 @@
+{
+  "booking_id": "CLN20260125164202",
+  "timestamp": "2026-01-25T16:42:02.307832",
+  "customer": "San Ansari",
+  "email": "kingshan8638@gmail.com",
+  "phone": "9380940828",
+  "service": "Home Cleaning",
+  "package": "1 BHK Cleaning - \u20b92,500",
+  "date": "2026-01-26",
+  "time": "6:00 PM",
+  "address": "Karnataka",
+  "payment": "Pay After Service",
+  "email_sent": false
+}
